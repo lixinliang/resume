@@ -22,7 +22,44 @@ Experience:
 
 ## Summary
 
+* Music, Cantonese pop music
+* Movie
+* ACG
+* Swiming
+* Game
+* Reading science fiction and fantasy
+
 ## Skill
+
+### HTML
+
+`HTML5`、`EJS`、`Art Template`、`SVG`、`Canvas`、`Progressive Web App`
+
+### CSS
+
+`CSS3`、`Sass`、`Less`、`Responsive web design`、`caniuse`
+
+### JavaScript
+
+Familiar:
+
+`ES6`、`TypeScript`、`Promise`、`Module`、`Async/Await`、`Vue`、`React`、`MVVM`、`jQuery`、`OOP`、`AOP`、`axios`、`Hybrid App`、`Lodash`
+
+Understanding:
+
+`THREE.js`、`Rx.js`、`Mocha`、`WebVR`、`aframe`
+
+### Nodejs
+
+`Gulp`、`Webpack`、`Babel`、`Postcss`、`Rollupjs`、`Express4`、`node-orm2`、`RESTful`、`AST`、`socket.io`
+
+### Other
+
+`Atom`、`Electron`
+
+### Tools
+
+`Photoshop`、`Sketch`、`Terminal`、`SVN`、`Cornerstone`、`Git`、`SourceTree`、`Chrome develop tool`、`Charles`、`TinyPNG`、`iconfont.cn`
 
 ## Timeline
 
