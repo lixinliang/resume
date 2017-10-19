@@ -3,3 +3,8 @@
 
 # resume
 https://www.lixinliang.com/resume
+
+### todo
+
+* tags
+* search
