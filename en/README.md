@@ -125,6 +125,10 @@ LegoX Team Member. https://legox.org
     * Support best quality icons for high DPI screens.
     * Use Page Visibility API to improve user experience.
 
+* Office Automatic App. https://oaapp.hiido.com/install
+    * Vue 2.x family.
+    * Hybrid develop with LEGO-SDK. https://lego-sdk.github.io/docs/api
+
 <p data-line="hobby"></p>
 ### 2015/05
 <label for="hobby"></label>
@@ -183,7 +187,7 @@ Welcome Mike Smith (W3C Deputy Director) and Xiaoqian Wu (W3C Member).
 ### 2016/10
 <label for="presentation"></label>
 
-* legox
+`Lego X —— UED前端技术实验室，为用户体验创造无限可能`.
 
 <p data-line="conference"></p>
 ### 2016/12
@@ -207,17 +211,19 @@ A common animation in live app. https://github.com/lixinliang/bubble-hearts
 
 Apply for a patten. https://www.google.com/patents/CN106681767A?cl=en
 
+Repo: https://github.com/micro-app/micro-app
+
 <p data-line="presentation"></p>
 ### 2017/06
 <label for="presentation"></label>
 
-* auto-test
+`自动化测试`, team presentation.
 
 <p data-line="presentation"></p>
 ### 2017/07
 <label for="presentation"></label>
 
-* lrkj
+`"无主题"分享`.
 
 <p data-line="hobby"></p>
 ### 2017/10
