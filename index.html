@@ -24,6 +24,12 @@
     img[alt="avatar"] {
         border-radius: 50%;
     }
+    [lang] {
+        display: none;
+    }
+    #app [lang] + * {
+        margin-top: 0;
+    }
     [data-action="view-picture"]::before {
       content: "view picture";
     }
@@ -38,46 +44,72 @@
       position: relative;
       border-radius: 3px;
       display: inline-block;
+      vertical-align: bottom;
       border: 1px solid currentColor;
     }
     label::before {
         content: attr(for);
+    }
+    [lang="zh"] ~ * label[for="reset"]::before {
+        content: "重置";
+    }
+    #reset:checked ~ #app [for="reset"] {
+        display: none;
+    }
+    #timeline- label:not([for="reset"]) {
+        display: none;
+        pointer-events: none;
     }
     input[type="radio"] {
         opacity: 0;
         z-index: -1;
         position: absolute;
     }
+    input[type="radio"]:not(#reset):checked ~ #app #timeline- ~ * {
+        display: none;
+    }
   </style>
 </head>
 <body>
   <script>
   [
-    ['hobby', '#e34c26'],// HTML
-    ['patent', '#563d7c'],// CSS
-    ['career', '#ffac45'],// Swift
-    ['education', '#3572A5'],// Python
-    ['conference', '#4F5D95'],// PHP
-    ['competition', '#b07219'],// Java
-    ['presentation', '#2b7489'],// TypeScript
-  ].forEach(function ( tag ) {
-    const text = tag[0];
-    const color = tag[1];
+    ['hobby', '业余', '#e34c26'],// HTML
+    ['patent', '专利', '#563d7c'],// CSS
+    ['career', '工作', '#ffac45'],// Swift
+    ['education', '教育', '#3572A5'],// Python
+    ['conference', '会议', '#4F5D95'],// PHP
+    ['competition', '比赛', '#b07219'],// Java
+    ['presentation', '演讲', '#2b7489'],// TypeScript
+].forEach(function ( item ) {
+    const tag = item[0];
+    const zh = item[1];
+    const color = item[2];
     const div = document.createElement('div');
     [
-        `<style>[for="${ text }"] {color:${ color }}</style>`,
-        `<style>[for="${ text }"]:hover {color:#fff;border-color:${ color };background-color:${ color }}</style>`,
-        `<style>[id="${ text }"]:checked ~ #app [for="${ text }"] {color:#fff;border-color:${ color };background-color:${ color }}</style>`,
-        `<style>[id="${ text }"]:checked ~ #app #timeline {color:${ color }}</style>`,
-    ].forEach(function ( style ) {
+        `<style>[lang="zh"] ~ [for="${ tag }"]::before {content:"${ zh }"}</style>`,
+        `<style>[lang="zh"] ~ * [for="${ tag }"]::before {content:"${ zh }"}</style>`,
+        `<style>[for="${ tag }"] {color:${ color }}</style>`,
+        `<style>[for="${ tag }"]:hover {color:#fff;border-color:${ color };background-color:${ color }}</style>`,
+        `<style>#${ tag }:checked ~ #app #timeline- {color:${ color }}</style>`,
+        `<style>#${ tag }:checked ~ #app #timeline- [for="${ tag }"] {display: inline-block}</style>`,
+        `<style>#${ tag }:checked ~ #reset + #app #timeline- ~ label {display: none}</style>`,
+    ].concat(
+        Array.apply(null, { length: 10 }).map(function ( value, index ) {
+            const length = index + 1;
+            const exclude = Array.apply(null, { length: length }).map(function () {
+                return `*:not([data-line])`;
+            }).join('+');
+            return `<style>#${ tag }:checked ~ #app #timeline- ~ [data-line="${ tag }"] + ${ exclude } {display:block}</style>`;
+        })
+    ).forEach(function ( style ) {
         div.innerHTML = style;
         document.head.appendChild(div.firstElementChild);
     });
-    div.innerHTML = `<input type="radio" id="${ text }" name="filter">`;
+    div.innerHTML = `<input type="radio" id="${ tag }" name="filter">`;
     document.body.appendChild(div.firstElementChild);
   });
   </script>
-  <input type="radio" id="none" name="filter" checked>
+  <input type="radio" id="reset" name="filter" checked>
   <div id="app"></div>
   <script src="https://unpkg.com/docute@3/dist/docute.js"></script>
   <script>
@@ -109,15 +141,6 @@
       if (event.target.dataset.action == 'view-picture') {
           event.target.nextElementSibling.querySelector('img').style.display = 'block';
           event.target.parentNode.removeChild(event.target);
-          return;
-      }
-      const none = document.querySelector('#none');
-      if (none.checked) {
-          return;
-      }
-      if (document.getElementById(event.target.getAttribute('for'))) {
-          none.click();
-          event.preventDefault();
           return;
       }
   }, false);
