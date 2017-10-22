@@ -1,3 +1,5 @@
+<p lang="en"></p>
+
 ## Profile
 
 Avatar:
@@ -67,23 +69,27 @@ Understanding:
 
 `Photoshop`、`Sketch`、`Terminal`、`SVN`、`Cornerstone`、`Git`、`SourceTree`、`Chrome develop tool`、`Charles`、`TinyPNG`、`iconfont.cn`
 
-## Timeline
+## Timeline <label for="hobby"></label> <label for="patent"></label> <label for="career"></label> <label for="education"></label> <label for="conference"></label> <label for="competition"></label> <label for="presentation"></label> <label for="reset"></label>
 
+<p data-line="competition"></p>
 ### 2005/10
 <label for="competition"></label>
 
 Gained third prize in Junior Group of National Olympiad in Informatics in Provinces (Pascal).
 
+<p data-line="education"></p>
 ### 2010/09
 <label for="education"></label>
 
 Studied at Software Engineering, South China Agricultural University.
 
+<p data-line="competition"></p>
 ### 2011/03
 <label for="competition"></label>
 
 Gained third prize in ACM Collegiate Programming Contest of South China Agricultural University.
 
+<p data-line="career"></p>
 ### 2014/04
 <label for="career"></label>
 
@@ -98,11 +104,13 @@ Worked at Front Office Technology (HK) Company Limited as a Front-End Engineer. 
     * Using Phonegap to build App.
     * Zepto.
 
+<p data-line="education"></p>
 ### 2014/06
 <label for="education"></label>
 
 Graduated at Software Engineering, South China Agricultural University.
 
+<p data-line="career"></p>
 ### 2015/03
 <label for="career"></label>
 
@@ -115,21 +123,25 @@ LegoX Team Member. https://legox.org
     * Support best quality icons for high DPI screens.
     * Use Page Visibility API to improve user experience.
 
+<p data-line="hobby"></p>
 ### 2015/05
 <label for="hobby"></label>
 
 Pure CSS YY Logo. http://www.lixinliang.com/live-demo/yy-bear
 
+<p data-line="presentation"></p>
 ### 2015/08
 <label for="presentation"></label>
 
 `Available feature intro of ECMAScript 6`, team presentation. https://github.com/lixinliang/blog/tree/master/notebook/2015.08.17-es6-intro
 
+<p data-line="presentation"></p>
 ### 2015/10
 <label for="presentation"></label>
 
 `HTML/CSS基础课`, Introduce HTML CSS basic knowledge for new employee, editor position. https://github.com/lixinliang/blog/tree/master/files/html-css-basic-knowledge
 
+<p data-line="conference"></p>
 ### 2016/03
 <label for="conference"></label>
 
@@ -143,16 +155,19 @@ Welcome both two engineers came from Facebook and the such excellent topics.
 
 ![1603](./img/1603.jpg)
 
+<p data-line="presentation"></p>
 ### 2016/04
 <label for="presentation"></label>
 
 `ECMAScript6 - Advice`, team presentation. https://github.com/lixinliang/blog/tree/master/notebook/2016.04.28-es6-advice
 
+<p data-line="presentation"></p>
 ### 2016/05
 <label for="presentation"></label>
 
 `用Promise打开新世界的大门`, team presentation. https://github.com/lixinliang/blog/tree/master/notebook/2016.05.05-promise-usage
 
+<p data-line="conference"></p>
 ### 2016/05
 <label for="conference"></label>
 
@@ -162,11 +177,13 @@ Welcome Mike Smith (W3C Deputy Director) and Xiaoqian Wu (W3C Member).
 
 ![1605](./img/1605.jpg)
 
+<p data-line="presentation"></p>
 ### 2016/10
 <label for="presentation"></label>
 
 * legox
 
+<p data-line="conference"></p>
 ### 2016/12
 <label for="conference"></label>
 
@@ -176,26 +193,31 @@ Welcome Andrey Sitnik and his `Postcss`.
 
 ![1612](./img/1612.jpg)
 
+<p data-line="hobby"></p>
 ### 2017/01
 <label for="hobby"></label>
 
 A common animation in live app. https://github.com/lixinliang/bubble-hearts
 
+<p data-line="patent"></p>
 ### 2017/05
 <label for="patent"></label>
 
 Apply for a patten. https://www.google.com/patents/CN106681767A?cl=en
 
+<p data-line="presentation"></p>
 ### 2017/06
 <label for="presentation"></label>
 
 * auto-test
 
+<p data-line="presentation"></p>
 ### 2017/07
 <label for="presentation"></label>
 
 * lrkj
 
+<p data-line="hobby"></p>
 ### 2017/10
 <label for="hobby"></label>
 
