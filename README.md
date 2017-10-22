@@ -6,5 +6,7 @@ https://www.lixinliang.com/resume
 
 ### todo
 
-* tags
+* <del>tags</del>
 * search
+* async image trigger scroll bug
+* print style
