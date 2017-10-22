@@ -2,29 +2,29 @@
 
 ## 简介
 
-Avatar:
+头像：
 
 <button class="docute-button docute-button-success" data-action="view-picture"></button>
 
 ![avatar](./img/avatar.jpg)
 
-姓名:
+姓名：
 
 * __李昕亮__
 
-居住地:
+居住地：
 
 * __广东广州__
 
-邮箱地址:
+邮箱地址：
 
 * __393464140@qq.com__
 
-学历:
+学历：
 
 * __本科，华南农业大学 软件学院 软件工程__
 
-工作年限:
+工作年限：
 
 * __3 年，前端工程师__
 
@@ -51,11 +51,11 @@ Avatar:
 
 ### JavaScript
 
-Familiar:
+熟悉：
 
 `ES6`、`TypeScript`、`Promise`、`Module`、`Async/Await`、`Vue`、`React`、`MVVM`、`jQuery`、`OOP`、`AOP`、`axios`、`Hybrid App`、`Lodash`
 
-Understanding:
+理解：
 
 `THREE.js`、`Rx.js`、`Mocha`、`WebVR`、`aframe`
 
@@ -97,11 +97,11 @@ Understanding:
 
 入职于，广州飞卓科汇信息科技有限公司，EBS 研发组，前端工程师。http://www.fsll.cn
 
-* Finance website. http://sc.xfafinance.com
+* 新华财经社官网。http://sc.xfafinance.com
     * Two develop members in total.
     * Using CMS System with PHP.
 
-* Futures Transaction Platform App.
+* 金银通 APP。
     * Two develop members in total.
     * Using Phonegap to build App.
     * Zepto.
@@ -120,10 +120,14 @@ Understanding:
 
 LegoX 团队成员之一。https://legox.org
 
-* Douwan official website of 2016 Ver. http://www.duowan.com/s/2016.html
+* 2016年，多玩首页。http://www.duowan.com/s/2016.html
     * Responsive web design with 2 size, wide and narrow.
     * Support best quality icons for high DPI screens.
     * Use Page Visibility API to improve user experience.
+
+* 移动 OA APP。https://oaapp.hiido.com/install
+    * Vue 2.x family.
+    * Hybrid develop with LEGO-SDK. https://lego-sdk.github.io/docs/api
 
 <p data-line="hobby"></p>
 ### 2015/05
@@ -183,7 +187,7 @@ LegoX 团队成员之一。https://legox.org
 ### 2016/10
 <label for="presentation"></label>
 
-* legox
+`Lego X —— UED前端技术实验室，为用户体验创造无限可能`。
 
 <p data-line="conference"></p>
 ### 2016/12
@@ -207,17 +211,19 @@ Canvas 实现直播间点赞动画。https://github.com/lixinliang/bubble-hearts
 
 申请专利。https://www.google.com/patents/CN106681767A?cl=zh&hl=zh-CN
 
+仓库地址：https://github.com/micro-app/micro-app
+
 <p data-line="presentation"></p>
 ### 2017/06
 <label for="presentation"></label>
 
-* auto-test
+`自动化测试`，组内分享。
 
 <p data-line="presentation"></p>
 ### 2017/07
 <label for="presentation"></label>
 
-* lrkj
+`"无主题"分享`。
 
 <p data-line="hobby"></p>
 ### 2017/10
