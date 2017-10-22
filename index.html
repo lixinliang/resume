@@ -33,8 +33,11 @@
     [data-action="view-picture"]::before {
       content: "view picture";
     }
+    [lang="zh"] ~ [data-action="view-picture"]::before {
+      content: "查看图片";
+    }
     label {
-      top: -6px;
+      top: -15px;
       color: #999;
       padding: 0 3px;
       cursor: pointer;
@@ -46,6 +49,9 @@
       display: inline-block;
       vertical-align: bottom;
       border: 1px solid currentColor;
+    }
+    #timeline- label {
+      top: -6px;
     }
     label::before {
       content: attr(for);
@@ -71,6 +77,32 @@
     body {
       overflow: hidden;
       /* hack for the scroll bug */
+    }
+    [lang="zh"] ~ #timeline- {
+        font-size: 0;
+        padding-bottom: 7.2px;
+    }
+    [lang="zh"] ~ #timeline- label {
+        margin-left: 5px;
+    }
+    [lang="zh"] ~ #timeline- .anchor {
+        line-height: 30px;
+    }
+    [lang="zh"] ~ #timeline-::before {
+        content: "时间线";
+        height: 30px;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 600;
+        vertical-align: top;
+        display: inline-block;
+    }
+    a[href="#/zh/?id=timeline-"] {
+        font-size: 0;
+    }
+    a[href="#/zh/?id=timeline-"]::before {
+        font-size: 14px;
+        content: "时间线";
     }
   </style>
   <style media="print">
