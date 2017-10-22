@@ -8,5 +8,5 @@ https://www.lixinliang.com/resume
 
 * <del>tags</del>
 * search
-* async image trigger scroll bug
-* print style
+* <del>async image trigger scroll bug</del>
+* <del>print style</del>
