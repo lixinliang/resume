@@ -1,3 +1,5 @@
+<p lang="zh"></p>
+
 ## 简介
 
 姓名:
@@ -53,3 +55,17 @@ Understanding:
 ### 工具
 
 `Photoshop`、`Sketch`、`Terminal`、`SVN`、`Cornerstone`、`Git`、`SourceTree`、`Chrome develop tool`、`Charles`、`TinyPNG`、`iconfont.cn`
+
+## Timeline <label for="hobby"></label> <label for="patent"></label> <label for="career"></label> <label for="education"></label> <label for="conference"></label> <label for="competition"></label> <label for="presentation"></label> <label for="reset"></label>
+
+<p data-line="competition"></p>
+### 2005/10
+<label for="competition"></label>
+
+Gained third prize in Junior Group of National Olympiad in Informatics in Provinces (Pascal).
+
+<p data-line="education"></p>
+### 2010/09
+<label for="education"></label>
+
+Studied at Software Engineering, South China Agricultural University.
