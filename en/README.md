@@ -30,6 +30,8 @@ Experience:
 
 ## Summary
 
+Hobby:
+
 * Music, Cantonese pop music
 * Movie
 * ACG
