@@ -19,16 +19,16 @@
       letter-spacing: 3px;
     }
     img {
-        display: none;
+      display: none;
     }
     img[alt="avatar"] {
-        border-radius: 50%;
+      border-radius: 50%;
     }
     [lang] {
-        display: none;
+      display: none;
     }
     #app [lang] + * {
-        margin-top: 0;
+      margin-top: 0;
     }
     [data-action="view-picture"]::before {
       content: "view picture";
@@ -48,25 +48,49 @@
       border: 1px solid currentColor;
     }
     label::before {
-        content: attr(for);
+      content: attr(for);
     }
     [lang="zh"] ~ * label[for="reset"]::before {
-        content: "重置";
+      content: "重置";
     }
     #reset:checked ~ #app [for="reset"] {
-        display: none;
+      display: none;
     }
     #timeline- label:not([for="reset"]) {
-        display: none;
-        pointer-events: none;
+      display: none;
+      pointer-events: none;
     }
     input[type="radio"] {
-        opacity: 0;
-        z-index: -1;
-        position: absolute;
+      opacity: 0;
+      z-index: -1;
+      position: absolute;
     }
     input[type="radio"]:not(#reset):checked ~ #app #timeline- ~ * {
-        display: none;
+      display: none;
+    }
+    body {
+      overflow: hidden;
+      /* hack for the scroll bug */
+    }
+  </style>
+  <style media="print">
+    img,
+    input,
+    button,
+    .header,
+    .sidebar,
+    .sidebar-toggle {
+      display: none;
+    }
+    img[alt="avatar"] {
+      display: block;
+    }
+    .content {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    .content-wrap {
+      overflow: visible;
     }
   </style>
 </head>
@@ -138,9 +162,10 @@
   </script>
   <script>
   document.addEventListener('click', function ( event ) {
-      if (event.target.dataset.action == 'view-picture') {
-          event.target.nextElementSibling.querySelector('img').style.display = 'block';
-          event.target.parentNode.removeChild(event.target);
+      const target = event.target;
+      if (event.isTrusted && target.dataset.action == 'view-picture') {
+          target.nextElementSibling.querySelector('img').style.display = 'block';
+          target.parentNode.removeChild(target);
           return;
       }
   }, false);
