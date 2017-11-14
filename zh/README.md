@@ -232,3 +232,11 @@ LegoX 团队成员之一。https://legox.org
 <label for="competition"></label>
 
 全国青少年信息学奥林匹克竞赛普及组（Pascal），三等奖。
+
+## QRCode
+
+扫描二维码，查看当前页面。
+
+<div class="qrcode"></div>
+
+---
