@@ -232,3 +232,11 @@ Studied at Software Engineering, South China Agricultural University.
 <label for="competition"></label>
 
 Gained third prize in Junior Group of National Olympiad in Informatics in Provinces (Pascal).
+
+## QRCode
+
+Scan QR Code to open this page in mobile client.
+
+<div class="qrcode"></div>
+
+---
