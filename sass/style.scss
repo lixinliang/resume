@@ -1,0 +1,143 @@
+#app {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+a:not([href^="#"])::before {
+  content: "\f0c1";
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 3px;
+}
+
+img {
+  display: none;
+  border-radius: 3px;
+  &[alt="avatar"] {
+    border-radius: 50%;
+  }
+}
+
+[lang] {
+  display: none;
+  #app & + * {
+    margin-top: 0;
+  }
+}
+
+[lang="en"] ~ h2 {
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+[lang="zh"] ~ h2 {
+  span {
+    font-size: 24px;
+  }
+}
+
+@mixin en ($content) {
+  [lang="en"] ~ & {
+    font-size: 0;
+    &::before {
+      font-size: 24px;
+      content: $content;
+      display: inline-block;
+      padding-bottom: 7.2px;
+    }
+  }
+}
+
+@mixin zh ($content) {
+  [lang="zh"] ~ & {
+    font-size: 0;
+    &::before {
+      font-size: 24px;
+      content: $content;
+      display: inline-block;
+      padding-bottom: 7.2px;
+    }
+  }
+}
+
+#profile {
+  @include zh("简介");
+}
+
+#summary {
+  @include zh("个人描述");
+}
+
+#qrcode {
+  @include en("QR Code");
+  @include zh("二维码");
+}
+
+@mixin menu-en ($id, $content) {
+  [href*="#{$id}"][href*="/en/"] {
+    font-size: 0;
+    &::before {
+      font-size: 14px;
+      content: $content;
+      display: inline-block;
+    }
+  }
+}
+
+@mixin menu-zh ($id, $content) {
+  [href*="#{$id}"][href*="/zh/"] {
+    font-size: 0;
+    &::before {
+      font-size: 14px;
+      content: $content;
+      display: inline-block;
+    }
+  }
+}
+
+.sidebar {
+  [href*="/en/"] {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  @include menu-zh("profile", "简介");
+  @include menu-zh("summary", "个人描述");
+  @include menu-en("qrcode", "QR Code");
+  @include menu-zh("qrcode", "二维码");
+}
+
+.content {
+  hr {
+    &:last-child {
+      opacity: 0;
+      height: 200px;
+    }
+  }
+}
+
+[data-role="image"] {
+  &::before {
+    content: "view picture";
+    [lang="zh"] ~ & {
+      content: "查看图片";
+    }
+  }
+}
+
+.qrcode {
+  width: 128px;
+  height: 128px;
+  background-size: 100% 100%;
+}
+.mobile {
+  .sidebar {
+    [href*="qrcode"] {
+      display: none;
+    }
+  }
+}
