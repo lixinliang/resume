@@ -3,14 +3,41 @@
   transition: opacity .3s;
 }
 
-a:not([href^="#"])::before {
-  content: "\f0c1";
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 3px;
+.content {
+  a:not([href^="#"])::before {
+    content: "\f0c1";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 3px;
+  }
+  h2 {
+    span {
+      font-size: 24px;
+    }
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    &::before {
+      font-size: 24px;
+      display: inline-block;
+      padding-bottom: 7.2px;
+    }
+  }
+  h3 {
+    span {
+      font-size: 20px;
+    }
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    &::before {
+      font-size: 20px;
+      display: inline-block;
+    }
+  }
 }
 
 img {
@@ -28,26 +55,11 @@ img {
   }
 }
 
-[lang="en"] ~ h2 {
-  &:first-letter {
-    text-transform: uppercase;
-  }
-}
-
-[lang="zh"] ~ h2 {
-  span {
-    font-size: 24px;
-  }
-}
-
 @mixin en ($content) {
   [lang="en"] ~ & {
     font-size: 0;
     &::before {
-      font-size: 24px;
       content: $content;
-      display: inline-block;
-      padding-bottom: 7.2px;
     }
   }
 }
@@ -56,10 +68,7 @@ img {
   [lang="zh"] ~ & {
     font-size: 0;
     &::before {
-      font-size: 24px;
       content: $content;
-      display: inline-block;
-      padding-bottom: 7.2px;
     }
   }
 }
@@ -70,6 +79,33 @@ img {
 
 #summary {
   @include zh("个人描述");
+}
+
+#skill {
+  @include zh("技能");
+}
+
+#html {
+  @include en("HTML");
+  @include zh("HTML");
+}
+
+#css {
+  @include en("CSS");
+  @include zh("CSS");
+}
+
+#javascript {
+  @include en("JavaScript");
+  @include zh("JavaScript");
+}
+
+#tools {
+  @include zh("工具");
+}
+
+#other {
+  @include zh("其他");
 }
 
 #qrcode {
@@ -100,13 +136,22 @@ img {
 }
 
 .sidebar {
-  [href*="/en/"] {
+  [href] {
     &:first-letter {
       text-transform: uppercase;
     }
   }
   @include menu-zh("profile", "简介");
   @include menu-zh("summary", "个人描述");
+  @include menu-zh("skill", "技能");
+  @include menu-en("html", "HTML");
+  @include menu-zh("html", "HTML");
+  @include menu-en("css", "CSS");
+  @include menu-zh("css", "CSS");
+  @include menu-en("javascript", "JavaScript");
+  @include menu-zh("javascript", "JavaScript");
+  @include menu-zh("tools", "工具");
+  @include menu-zh("other", "其他");
   @include menu-en("qrcode", "QR Code");
   @include menu-zh("qrcode", "二维码");
 }
