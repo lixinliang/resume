@@ -114,7 +114,8 @@ img {
 }
 
 @mixin menu-en ($id, $content) {
-  [href*="#{$id}"][href*="/en/"] {
+  [href*="#{$id}"][href*="/en/"],
+  [href*="#{$id}"][href^="#/?id"] {
     font-size: 0;
     &::before {
       font-size: 14px;
