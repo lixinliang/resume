@@ -1,0 +1,51 @@
+img,
+input,
+label,
+button,
+.header,
+.sidebar,
+.sidebar-toggle {
+  display: none;
+}
+
+img[alt="avatar"] {
+  right: 30px;
+  display: block;
+  position: absolute;
+}
+
+#profile + p {
+  display: none;
+}
+
+ul[data-primary="profile"] {
+  padding-left: 8em;
+  margin-bottom: -20px;
+  position: relative;
+  top: -40px;
+  li {
+    list-style: none;
+  }
+}
+
+ul[data-primary="summary"] {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  li {
+    margin: 0;
+    float: left;
+    list-style: none;
+    &:not(:last-child) {
+      &::after {
+        content: "、";
+      }
+    }
+  }
+}
+
+[data-primary="qrcode"] {
+  display: none;
+}
