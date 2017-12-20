@@ -157,6 +157,56 @@ img {
   @include menu-zh("qrcode", "二维码");
 }
 
+h3 {
+  &[data-primary="timeline"] {
+    margin: 0;
+    font-size: 0;
+  }
+}
+
+.sidebar-headings .sidebar-heading[data-level="4"] {
+  display: none;
+}
+
+@mixin tag-zh ($id, $content, $color) {
+  &[id*="#{$id}"] {
+    &:focus {
+      color: $color;
+    }
+    em {
+      color: $color;
+      [lang="zh"] ~ & {
+        font-size: 0;
+        &::before {
+          font-size: 14px;
+          content: $content;
+        }
+      }
+    }
+  }
+}
+
+h4 {
+  &[data-primary="timeline"] {
+    em {
+      float: left;
+      padding: 0 3px;
+      border-radius: 3px;
+      margin-right: 5px;
+      border: 1px solid currentColor;
+      font-style: normal;
+    }
+    @include tag-zh("hobby", "业余", #e34c26); // HTML
+    @include tag-zh("career", "工作", #ffac45); // Swift
+    @include tag-zh("patent", "专利", #563d7c); // CSS
+    @include tag-zh("education", "教育", #3572A5); // Python
+    @include tag-zh("conference", "会议", #4F5D95); // PHP
+    @include tag-zh("competition", "比赛", #b07219); // Java
+    @include tag-zh("presentation", "演讲", #2b7489); // TypeScript
+
+  }
+}
+
 .content {
   hr {
     &:last-child {
