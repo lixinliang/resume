@@ -1,0 +1,25 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "https://preview.lixinliang.com/resume/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lixinliang/resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": {
+    "name": "lixinliang",
+    "url": "https://github.com/lixinliang"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lixinliang/resume/issues"
+  },
+  "homepage": "https://github.com/lixinliang/resume#readme"
+}
