@@ -1,9 +1,20 @@
 {
   "name": "resume",
-  "version": "1.0.0",
-  "description": "https://preview.lixinliang.com/resume/",
+  "version": "2.0.0",
+  "description": "https://preview.lixinliang.com/resume",
   "main": "index.js",
   "scripts": {
+    "build-css-print": "node-sass --output-style compressed ./static/sass/print.scss > ./static/css/print.css",
+    "build-css-style": "node-sass --output-style compressed ./static/sass/style.scss > ./static/css/style.css",
+    "build-css": "npm run build-css-print && npm run build-css-style",
+    "build-md-reset": "echo '' > ./md/README.md && echo '' > ./md/zh.md",
+    "build-md-profile": "cat ./md/en/profile.md >> ./md/README.md && cat ./md/zh/profile.md >> ./md/zh.md",
+    "build-md-skill": "cat ./md/en/skill.md >> ./md/README.md && cat ./md/zh/skill.md >> ./md/zh.md",
+    "build-md-timeline": "cat ./md/en/timeline.md >> ./md/README.md && cat ./md/zh/timeline.md >> ./md/zh.md",
+    "build-md-patent": "cat ./md/en/patent.md >> ./md/README.md && cat ./md/zh/patent.md >> ./md/zh.md",
+    "build-md-presentation": "cat ./md/en/presentation.md >> ./md/README.md && cat ./md/zh/presentation.md >> ./md/zh.md",
+    "build-md": "npm run build-md-reset && npm run build-md-profile && npm run build-md-skill && npm run build-md-timeline && npm run build-md-patent",
+    "build": "npm run build-css && npm run build-md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/lixinliang/resume/issues"
   },
-  "homepage": "https://github.com/lixinliang/resume#readme"
+  "homepage": "https://github.com/lixinliang/resume#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
 }

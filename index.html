@@ -1,150 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  <title> Resume </title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script src="https://unpkg.com/docute@3/dist/docute.js"></script>
-  <script src="https://unpkg.com/mousetrap@1.6.1/mousetrap.js"></script>
-  <script src="https://unpkg.com/qrcode_js@1.0.0/qrcode.min.js"></script>
-  <script src="https://unpkg.com/axios@0.17.1/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/sass.js@0.10.7/dist/sass.sync.js"></script>
-  <script src="https://unpkg.com/mobile-detect@1.3.7/mobile-detect.js"></script>
-  <script src="https://unpkg.com/mobile-detect@1.3.7/mobile-detect-modernizr.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/docute.css">
-  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-  <style type="text/css">
-    #app {
-      opacity: 0;
-    }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title> RESUME </title>
+  <link rel="stylesheet" type="text/css" href="./dev/docute.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/print.css" media="print">
 </head>
 <body>
   <div id="app"></div>
-  <script>
-    const langs = [
-      {
-        title: 'English',
-        path: '/en/',
-      },
-      {
-        title: '简体中文',
-        path: '/zh/',
-      },
-    ];
-    docute.init({
-      tocVisibleDepth: 3,
-      home: 'en/README.md',
-      twitter: 'qq393464140',
-      repo: 'lixinliang/resume',
-      nav: {
-        default: [
-          {
-            title: 'Languages',
-            type: 'dropdown',
-            items: langs,
-          },
-        ],
-        'zh-Hans': [
-          {
-            title: '选择语言',
-            type: 'dropdown',
-            items: langs,
-          },
-        ],
-      },
-    });
-  </script>
-  <script>
-    axios
-    .get('./sass/style.scss')
-    .then(function (res) {
-      Sass.compile(res.data, function callback (result) {
-        const div = document.createElement('div');
-        div.innerHTML = `<style>${ result.text }</style>`;
-        document.head.appendChild(div.firstElementChild);
-      });
-    });
-    axios
-    .get('./sass/print.scss')
-    .then(function (res) {
-      Sass.compile(res.data, function callback (result) {
-        const div = document.createElement('div');
-        div.innerHTML = `<style media="print">${ result.text }</style>`;
-        document.head.appendChild(div.firstElementChild);
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener('click', function ( event ) {
-      if (event.isTrusted) {
-        const target = event.target;
-        const role = target.dataset.role;
-        if (role == 'image') {
-          target.nextElementSibling.querySelector('img').style.display = 'block';
-          target.parentNode.removeChild(target);
-          return;
-        }
-      }
-    }, false);
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (document.documentElement.classList.contains('mobile')) {
-        return;
-      }
-      const div = document.createElement('div');
-      new QRCode(div, {
-        text: location.href,
-        width: 128,
-        height: 128,
-        colorDark: '#000000',
-        colorLight: '#ffffff',
-        correctLevel: QRCode.CorrectLevel.M,
-      });
-      div.querySelector('img').onload = function () {
-        div.innerHTML = `<style>.qrcode { background-image: url(${ this.src }) }</style>`;
-        document.head.appendChild(div.firstElementChild);
-      };
-    });
-  </script>
-  <script>
-    requestAnimationFrame(function () {
-      const content = document.querySelector('.content');
-      if (content.children.length) {
-        const types = content.querySelectorAll('.content>h2[id]:not([data-primary])');
-        [].slice.call(types).forEach(function ( el ) {
-          const id = el.id;
-          el.dataset.primary = id;
-          while (!el.nextElementSibling.matches('h2[id]')) {
-            el = el.nextElementSibling;
-            if (el.matches(':last-child')) {
-              return;
-            }
-            el.dataset.primary = id;
-          }
-        });
-      }
-      requestAnimationFrame(arguments.callee);
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      let style = document.querySelector('style[media="print"]');
-      Mousetrap.bind(['command+p'], function ( event ) {
-        style = style || document.querySelector('style[media="print"]');
-        if (style.hasAttribute('media')) {
-          style.removeAttribute('media');
-        } else {
-          style.setAttribute('media', 'print');
-        }
-        return false;
-      });
-    });
-    // dev
-  </script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docute@4.9.3/dist/docute.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/qrcode_js@1.0.0"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+  <script type="text/javascript" src="./static/js/main.js"></script>
+  <!-- <script type="text/javascript" src="cdn.jsdelivr.net/npm/mousetrap@1.6.2"></script> -->
+  <!-- <script type="text/javascript" src="cdn.jsdelivr.net/npm/sass.js@0.10.13"></script> -->
 </body>
 </html>
