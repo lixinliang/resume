@@ -11,9 +11,10 @@
     "build-md-profile": "cat ./md/en/profile.md >> ./md/README.md && cat ./md/zh/profile.md >> ./md/zh.md",
     "build-md-skill": "cat ./md/en/skill.md >> ./md/README.md && cat ./md/zh/skill.md >> ./md/zh.md",
     "build-md-timeline": "cat ./md/en/timeline.md >> ./md/README.md && cat ./md/zh/timeline.md >> ./md/zh.md",
+    "build-md-preview": "cat ./md/en/preview.md >> ./md/README.md && cat ./md/zh/preview.md >> ./md/zh.md",
     "build-md-patent": "cat ./md/en/patent.md >> ./md/README.md && cat ./md/zh/patent.md >> ./md/zh.md",
     "build-md-presentation": "cat ./md/en/presentation.md >> ./md/README.md && cat ./md/zh/presentation.md >> ./md/zh.md",
-    "build-md": "npm run build-md-reset && npm run build-md-profile && npm run build-md-skill && npm run build-md-timeline && npm run build-md-patent",
+    "build-md": "npm run build-md-reset && npm run build-md-profile && npm run build-md-skill && npm run build-md-timeline && npm run build-md-preview && npm run build-md-patent",
     "build": "npm run build-css && npm run build-md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
